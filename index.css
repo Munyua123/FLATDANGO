@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap');
+
+body{
+    text-align: center;
+    background-color: #bbc4c4;
+    font-family: 'Sometype Mono', monospace;
+}
+
+.titlepage{
+    background-color: #b4cccb;
+    width: auto;
+    height: 60px;
+    margin: auto;
+}
+#cinemaName{
+    text-align: center;
+    padding-top: 1rem;
+}
+#filmTitle{
+    text-align: center;
+}
+#filmPoster{
+  /* margin-left: 5.4rem; */
+  margin: auto;
+}
+#filmDescription{
+    border: 2px solid #000;
+    padding: 1rem;
+    background-color: #0102;
+}
+#buyTicket{
+    background-color: burlywood;
+    width: 20rem;
+    height: 2rem;
+}

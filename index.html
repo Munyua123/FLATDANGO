@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlatDango Cinemas</title>
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <section>
+        <header class="titlepage">
+            <h1 id="cinemaName"> FLATDANGO CINEMAS</h1>
+        </header>
+
+    <!-- This belong to the menu where people will see all available films
+        each list that will be added should have a class=filmItem  -->
+        <div>
+            <ul id="films" >
+            </ul>
+        </div>
+    </section>
+    <!-- This section will hold our movie name. -->
+    <section>
+        <h2 id="filmTitle"> Movie Name</h2>
+    </section>
+    <!-- This section will hold the film poster image. -->
+    <section>
+        <img src="https://placehold.jp/200x200.png" alt="Poster-name" id="filmPoster">
+    </section>
+    <!-- This will hold the showtime and runtime-->
+    <section >
+        <p>ShowTime:<span id="showTime"></span></p>
+        <p id="runTime">RunTime:<span id="runTime"></span ></p>
+        <!-- This will hold the number of available tickets -->
+        <p>Available Tickets:<span id="ticketAvailable"></span></p>
+    </section>
+    <!-- This will provide the movie description -->
+    <section>
+        <p id="filmDescription">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+            Commodi illo iste dignissimos, voluptatibus repellat inventore! 
+            Repellat nostrum inventore debitis dignissimos voluptatum 
+            delectus fugit iusto illum ducimus sunt, non quos eaque.
+        </p>
+    </section>
+    <section>
+        <button type="submit" id="buyTicket">
+            Buy Tickets
+        </button>
+    </section>
+</body>
+</html>
