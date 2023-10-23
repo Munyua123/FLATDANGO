@@ -16,6 +16,25 @@ body{
     text-align: center;
     padding-top: 1rem;
 }
+#films{
+    list-style: none;
+}
+a:hover{
+    transition: color 300ms;
+}
+a:hover{
+    color: orangered;
+}
+#films, a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    color: #000;
+}
+#filmDetails{
+    display: none;
+}
 #filmTitle{
     text-align: center;
 }

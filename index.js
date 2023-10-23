@@ -1,4 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
+  function fetchFilms(url) {
+    // const baseUrl = "http://localhost:3000/films/1";
+    fetch(url)
+      .then((res) => res.json())
+      .then((items) => addFilms(items))
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }
   function addFilms(items) {
     // This is for the movie name
     let title = document.querySelector("#movieTitle");
@@ -33,16 +42,32 @@ document.addEventListener("DOMContentLoaded", () => {
     let filmDescription = document.createElement("p");
     filmDescription.textContent = `${items.description}`;
     movieDescription.appendChild(filmDescription);
+
   }
 
-  function fetchFilms() {
-    const baseUrl = "http://localhost:3000/films/1";
-    fetch(baseUrl)
-      .then((res) => res.json())
-      .then((items) => addFilms(items))
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-  }
-  fetchFilms();
+// This fetch is to showcase all the nameTitles, 
+// and allowing the users to click to go to the specified movie
+  fetch("http://localhost:3000/films")
+  .then(res => res.json())
+  .then((data) => data.map((items) => menuList(items)))
+
+    function menuList(items) {
+      let menu = document.querySelector("#films")
+      const menuList = document.createElement("li")
+      menuList.innerHTML = `
+      <a href= http://localhost:3000/films/${items.id} target="_blank">${items.title}</a>
+      `
+      menuList.classList.add("item")
+      menuList.addEventListener("click", (e) => {
+        e.preventDefault()
+        fetchFilms(`http://localhost:3000/films/${items.id}`)
+        document.querySelector("#films").style.display = "none";
+        document.querySelector("#filmDetails").style.display = "block";
+      })
+      menu.appendChild(menuList)
+    }
+      
+
+
+  fetchFilms("http://localhost:3000/films/1");
 });
